@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: mapaurbano
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mapaurbano
+    username: postgres
+    password: 140819d
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  jwt:
+    expiration: 86400000 #24horas
+    key: ${JWT_KEY:Ol2T2BscOYXyvS3CT8LfGeIdPbajY/9WmmbZa9sydNJR3IIZDFSv2pr8CXEoSjqP4K+eL4EXTsELm6Am8nSSRQ==}
