@@ -63,4 +63,9 @@ public class TokenProvider {
     }
 
 
+    public long getExpireAt() {
+        return tempo;
+    }
+
+
 }

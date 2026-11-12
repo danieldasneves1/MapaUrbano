@@ -11,7 +11,7 @@ public record OcorrenciaRequestDTO(
         String categoria,
 
         @NotBlank(message = "logradouro deve ser obrigatorio")
-        String logradoruo,
+        String logradouro,
 
         @NotBlank(message = "numero deve ser obrigatorio")
         String numero,
