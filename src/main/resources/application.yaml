@@ -7,7 +7,7 @@ spring:
     name: mapaurbano
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/mapaurbano
+    url: jdbc:postgresql://postgres:5432/mapaurbano
     username: postgres
     password: 140819d
     driver-class-name: org.postgresql.Driver
@@ -26,3 +26,7 @@ spring:
       org:
         springframework:
           security: DEBUG
+
+  geoapi:
+    url: "https://api.geoapify.com/v1/geocode"
+    keyapi: "d1e088b49c744c369a911020afff1158"

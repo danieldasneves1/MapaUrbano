@@ -1,4 +1,4 @@
 package v1.mapaurbano.service;
 
-public class NominatimService {
+public class GeoapiService {
 }
