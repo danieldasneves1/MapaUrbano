@@ -20,7 +20,7 @@ public class WebClientConfig {
     @Value("${geoapi.url}")
     private String url;
 
-    @Value("$geoapi.keyapi")
+    @Value("${geoapi.keyapi}")
     private String keyApi;
 
     @Bean

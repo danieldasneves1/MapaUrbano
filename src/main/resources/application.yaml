@@ -1,15 +1,17 @@
 jwt:
   expiration: 86400000
-  key: "0l2T2Bsc0YXyvS3CT8LfGeIdPbajY/9WmmbZa9sydNJR3IIZDFSv2pr8CXEoSjqP4K+eL4EXTSElm6Am8nSSR0=="
+  key: ${JWT_KEY}
 
 spring:
   application:
     name: mapaurbano
+  config:
+    import: optional:file:.env[.properties]
 
   datasource:
     url: jdbc:postgresql://postgres:5432/mapaurbano
     username: postgres
-    password: 140819d
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -29,4 +31,4 @@ spring:
 
   geoapi:
     url: "https://api.geoapify.com/v1/geocode"
-    keyapi: "d1e088b49c744c369a911020afff1158"
+    keyapi: ${GEOAPI_KEY}

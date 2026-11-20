@@ -5,7 +5,7 @@ services:
     container_name: banco
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 140819d
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: mapaurbano
     ports:
       - "5432:5432"
@@ -23,7 +23,9 @@ services:
     environment:
      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/mapaurbano
      - SPRING_DATASOURCE_USERNAME=postgres
-     - SPRING_DATASOURCE_PASSWORD=140819d
+     - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+     - GEOAPI_KEY=${GEOAPI_KEY}
+     - JWT_KEY=${JWT_KEY}
     depends_on:
       postgres:
         condition: service_healthy
